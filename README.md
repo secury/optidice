@@ -1,5 +1,7 @@
 # OptiDICE
 
+This repository is the official implementation of [OptiDICE: Offline Policy Optimization via Stationary Distribution Correction Estimation](https://arxiv.org/abs/2106.10783) (ICML 2021).
+
 ## Installation Guide
 
 ### Environment Variables
