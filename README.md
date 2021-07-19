@@ -1,6 +1,6 @@
 # OptiDICE
 
-This repository is the official implementation of [OptiDICE: Offline Policy Optimization via Stationary Distribution Correction Estimation](https://arxiv.org/abs/2106.10783) (ICML 2021).
+This repository is the official implementation of [OptiDICE: Offline Policy Optimization via Stationary Distribution Correction Estimation](https://arxiv.org/abs/2106.10783) (presented at ICML 2021).
 
 ## Installation Guide
 
@@ -51,3 +51,17 @@ This repository is the official implementation of [OptiDICE: Offline Policy Opti
        --e_loss_type=mse \
        --alpha=0.001
      ```
+
+
+### Bibtex
+
+If you use this code, please cite our paper:
+```
+@inproceedings{lee2021optidice,
+  author    = {Jongmin Lee and Wonseok Jeon and Byung-Jun Lee and Joelle Pineau and Kee-Eung Kim},
+  title     = {OptiDICE: Offline Policy Optimization via Stationary Distribution Correction Estimation},
+  booktitle = {Proceedings of the 38th International Conference on Machine Learning (ICML)},
+  year      = {2021}
+}
+```
+
