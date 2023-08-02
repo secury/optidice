@@ -132,7 +132,7 @@ def generate_trajectory(seed, mdp, pi, num_episodes=10, max_timesteps=50, vector
             return (p.cumsum(axis=1) > r).argmax(axis=1)
 
         trajectory = [[] for i in range(num_episodes)]
-        done = np.zeros(num_episodes, dtype=np.bool)
+        done = np.zeros(num_episodes, dtype=bool)
         state = np.array([mdp.initial_state] * num_episodes)
         for t in range(max_timesteps):
             action = random_choice_prob_vectorized(p=pi[state, :])
@@ -266,7 +266,7 @@ def OptiDICE(mdp, pi_b, trajectory, alpha=0.01, initial_v=None):
 
     def compute_ewJ(v):
         e = (r + mdp.gamma * P @ v - B @ v)
-        m = np.array((e / alpha + 1) >= 0, dtype=np.float)
+        m = np.array((e / alpha + 1) >= 0, dtype=float)
         w = (np.array(e) / alpha + 1) * m
         w[np.isclose(d, 0)] = 0
         J = ((mdp.gamma * P - B) / alpha) * m[:, None]
